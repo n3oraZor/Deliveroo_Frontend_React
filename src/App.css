@@ -121,6 +121,7 @@ header::after {
         align-items: center;
         justify-content: center;
         padding: 40px 0;
+        font-size: 0.8rem;
 
         .basket-listing-price {
           width: 100%;
@@ -134,14 +135,15 @@ header::after {
         .container-in-basket {
           display: flex;
           flex-direction: column;
+          width: 90%;
 
           .items {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
-            width: 300px;
+
+            width: 100%%;
 
             .quantity {
               width: 20%;
@@ -158,6 +160,7 @@ header::after {
                 border-radius: 50%;
                 border: solid 1px #21cfbe;
                 color: #21cfbe;
+
                 background: none;
                 padding: 0;
                 margin: 5px;
@@ -179,17 +182,53 @@ header::after {
           }
         }
       }
+
+      .price-alignment-subtotal,
+      .price-alignment {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .price-alignment-subtotal::after© {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border: 0.1px solid black;
+        transform: translateY(-10px);
+      }
+
+      .price-alignment-total {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        font-size: 1rem;
+        margin: 20px 0;
+        padding: 20px 0;
+      }
+
+      .price-alignment-total:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border: 0.1px solid black;
+        transform: translateY(-10px);
+      }
+
       span {
         padding: 5px 0;
       }
     }
 
     button {
-      height: 80px;
+      height: 40px;
       margin: 10px;
       border-radius: 5px;
-      color: grey;
-      background: #bbc3c3;
+      color: white;
+      font-weight: bold;
+      background: #21cfbe;
       border: none;
     }
   }
@@ -233,7 +272,7 @@ header::after {
         color: rgb(219, 216, 216);
       }
       .price {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: rgb(219, 216, 216);
 
         span {

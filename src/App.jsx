@@ -148,6 +148,7 @@ function App() {
                             {(
                               Number(elem3.price) * Number(elem3.quantity)
                             ).toFixed(2) || ""}
+                            €
                           </div>
                         </div>
                       );
@@ -155,11 +156,19 @@ function App() {
                   </div>
                   {inBasket.length > 0 ? (
                     <div className="basket-listing-price">
-                      <span>Sous-total {calculateSubtotal().toFixed(2)}€</span>
-                      <span>Frais de livraison 2.50€</span>
-                      <span>
-                        Total {(calculateSubtotal() + 2.5).toFixed(2)}€
-                      </span>
+                      <div className="price-alignment-subtotal">
+                        <span>Sous-total</span>
+                        <span>{calculateSubtotal().toFixed(2)}€</span>
+                      </div>
+                      <div className="price-alignment">
+                        <span>Frais de livraison</span>
+                        <span>2.50€</span>
+                      </div>
+
+                      <div className="price-alignment-total">
+                        <span>Total</span>
+                        <span>{(calculateSubtotal() + 2.5).toFixed(2)}€</span>
+                      </div>
                     </div>
                   ) : (
                     <div className="basket-listing-price">

@@ -115,85 +115,146 @@ header::after {
       -webkit-box-shadow: 11px 11px 29px 0px rgba(0, 0, 0, 0.5);
       box-shadow: 11px 11px 29px 0px rgba(0, 0, 0, 0.5);
 
-      span {
+      .basket-listing {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 40px 0;
+
+        .basket-listing-price {
+          width: 100%;
+          padding: 30px 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .container-in-basket {
+          display: flex;
+          flex-direction: column;
+
+          .items {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            width: 300px;
+
+            .quantity {
+              width: 20%;
+              display: flex;
+              align-items: center;
+              justify-content: left;
+
+              button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                border: solid 1px #21cfbe;
+                color: #21cfbe;
+                background: none;
+                padding: 0;
+                margin: 5px;
+              }
+            }
+            .title {
+              width: 60%;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .price {
+              width: 20%;
+              display: flex;
+              align-items: center;
+              justify-content: right;
+            }
+          }
+        }
+      }
+      span {
+        padding: 5px 0;
+      }
+    }
+
+    button {
+      height: 80px;
+      margin: 10px;
+      border-radius: 5px;
+      color: grey;
+      background: #bbc3c3;
+      border: none;
+    }
+  }
+}
+
+.restaurant-category-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .restaurant-category-item {
+    height: 140px;
+    width: 48%;
+    margin: 10px 0;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .restaurant-category-item-left {
+      width: 70%;
+      line-height: 20px;
+      margin: 10px;
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 5px 5px;
       }
 
-      button {
-        height: 80px;
-        margin: 10px;
-        border-radius: 5px;
-        color: grey;
-        background: #bbc3c3;
-        border: none;
+      p {
+        font-size: 0.9rem;
+        margin: 8px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        color: rgb(219, 216, 216);
+      }
+      .price {
+        font-size: 1.1rem;
+        color: rgb(219, 216, 216);
+
+        span {
+          color: orange;
+          padding: 0 10px;
+        }
       }
     }
   }
 
-  .restaurant-category-menu {
+  .restaurant-category-item-right {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
 
-    .restaurant-category-item {
-      height: 140px;
-      width: 48%;
-      margin: 10px 0;
-      background: white;
+    width: 30%;
+
+    img {
+      height: 100px;
+      width: 100px;
+      margin: 10px;
       border-radius: 10px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      .restaurant-category-item-left {
-        width: 70%;
-        line-height: 20px;
-        margin: 10px;
-
-        h3 {
-          font-size: 1.2rem;
-          margin: 5px 5px;
-        }
-
-        p {
-          font-size: 0.9rem;
-          margin: 8px 5px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          color: rgb(219, 216, 216);
-        }
-        .price {
-          font-size: 1.1rem;
-          color: rgb(219, 216, 216);
-
-          span {
-            color: orange;
-            padding: 0 10px;
-          }
-        }
-      }
-    }
-
-    .restaurant-category-item-right {
-      display: flex;
-      justify-content: center;
-
-      width: 30%;
-
-      img {
-        height: 100px;
-        width: 100px;
-        margin: 10px;
-        border-radius: 10px;
-      }
     }
   }
 }
